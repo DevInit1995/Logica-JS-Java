@@ -15,11 +15,11 @@ public class java {
 
         /*
          * System.out.println("Informe o primeiro valor: ");
-         * Integer n1 = sc.nextInt();
+         * int n1 = sc.nextInt();
          * 
          * System.out.println("Informe o segundo valor: ");
-         * Integer n2 = sc.nextInt();
-         * Integer soma = n1 + n2;
+         * int n2 = sc.nextInt();
+         * int soma = n1 + n2;
          * System.out.println("O resultado da soma" + " é: " + soma);
          */
 
@@ -56,15 +56,77 @@ public class java {
          * System.out.println("Valor exponecial: " + expo);
          */
 
-        Double raizQ;
+        /*
+         * Double raizQ;
+         * 
+         * System.out.println("Informe um valor: ");
+         * raizQ = sc.nextDouble();
+         * 
+         * raizQ = Math.sqrt(raizQ);
+         * 
+         * System.out.println("A raiz quadrada é " + raizQ);
+         */
 
-        System.out.println("Informe um valor: ");
-        raizQ = sc.nextDouble();
+        // OPERADORES LÓGICOS E RELACIONAIS
 
-        raizQ = Math.sqrt(raizQ);
+        int a = 5;
+        int b = 8;
+        int c = 10;
+        int r;
+        boolean m;
 
-        System.out.println("A raiz quadrada é " + raizQ);
+        m = a != b;
+        System.out.println(m);
 
+        // Maior que ou igual (>=)
+        m = b >= a;
+        System.out.println(m);
+        // Menor que ou igual (<=)
+        m = a <= b;
+        System.out.println(m);
+
+        m = a == b;
+        boolean am = c > a;
+        System.out.println(m);
+        System.out.println(am);
+
+        // Atribuição de adição
+        int d, e, f, g;
+
+        d = 10;
+        e = 10;
+        f = 5;
+
+        int mar = d + f;
+        d += f;
+
+        int ma = d - f;
+        d -= f;
+
+        System.out.println(mar);
+        System.out.println(d);
+
+        System.out.println(ma);
+        System.out.println(d);
+
+        int l1, l2, l3;
+        boolean eq, es;
+        System.out.println("Digite o primeiro lado: ");
+        l1 = sc.nextInt();
+        System.out.println("Digite o segundo lado: ");
+        l2 = sc.nextInt();
+        System.out.println("Digite o terceiro lado: ");
+        l3 = sc.nextInt();
+
+        if (l1 == l2 && l2 == l3) {
+            eq = l1 == l2;
+            eq = l2 == l3;
+            System.out.println("O triangulo é equilatero: " + eq);
+        } else if (l1 != l2 && l2 != l3) {
+            es = l1 != l2;
+            es = l2 != l3;
+            System.out.println("O triangulo é escaleno: " + es);
+        }
         sc.close();
     }
 }
