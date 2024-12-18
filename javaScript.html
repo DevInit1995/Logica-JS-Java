@@ -82,7 +82,41 @@
         es = l2 !== l3;
         alert("O triangulo é escaleno: " + es);
       }
-        */
+      */
+
+      /*//conversor de moedas
+      var reais = parseInt(prompt("Quantos reais?"));
+      var calculo = reais / 6.17;
+      alert("Para dólar: " + calculo.toFixed(2));*/
+
+      /*//converter temperatura
+      var fahrenheit = parseInt(prompt("Informe o Fahrenheit: "));
+      var calculo = (5 / 9) * (fahrenheit - 32);
+      alert("A temperatura em Fahrenheit é: " + calculo.toFixed(2));*/
+
+      //porcentagem preços de imposto
+      function porcentagem() {
+        var percentual;
+        var preco_com_imposto;
+
+        var preco = parseFloat(prompt("Qual o preço do produto? US$"));
+
+        if (preco == 50) {
+          percentual = 20;
+          var calculo = (preco * percentual) / 100;
+          preco_com_imposto = preco + calculo;
+          alert("O valor total com imposto: " + preco_com_imposto.toFixed(2));
+        } else if (preco > 50.01 && preco <= 3000) {
+          percentual = 60;
+          var calculo = (preco * percentual) / 100;
+          preco_com_imposto = preco + calculo;
+          alert("O valor total com imposto: " + preco_com_imposto.toFixed(2));
+        }
+      }
+
+      porcentagem();
+
+      //empréstimo
     </script>
   </body>
 </html>

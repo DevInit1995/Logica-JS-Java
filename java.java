@@ -68,65 +68,110 @@ public class java {
          */
 
         // OPERADORES LÓGICOS E RELACIONAIS
+        /*
+         * int a = 5;
+         * int b = 8;
+         * int c = 10;
+         * int r;
+         * boolean m;
+         * 
+         * m = a != b;
+         * System.out.println(m);
+         * 
+         * // Maior que ou igual (>=)
+         * m = b >= a;
+         * System.out.println(m);
+         * // Menor que ou igual (<=)
+         * m = a <= b;
+         * System.out.println(m);
+         * 
+         * m = a == b;
+         * boolean am = c > a;
+         * System.out.println(m);
+         * System.out.println(am);
+         * 
+         * // Atribuição de adição
+         * int d, e, f, g;
+         * 
+         * d = 10;
+         * e = 10;
+         * f = 5;
+         * 
+         * int mar = d + f;
+         * d += f;
+         * 
+         * int ma = d - f;
+         * d -= f;
+         * 
+         * System.out.println(mar);
+         * System.out.println(d);
+         * 
+         * System.out.println(ma);
+         * System.out.println(d);
+         * 
+         * int l1, l2, l3;
+         * boolean eq, es;
+         * System.out.println("Digite o primeiro lado: ");
+         * l1 = sc.nextInt();
+         * System.out.println("Digite o segundo lado: ");
+         * l2 = sc.nextInt();
+         * System.out.println("Digite o terceiro lado: ");
+         * l3 = sc.nextInt();
+         * 
+         * if (l1 == l2 && l2 == l3) {
+         * eq = l1 == l2;
+         * eq = l2 == l3;
+         * System.out.println("O triangulo é equilatero: " + eq);
+         * } else if (l1 != l2 && l2 != l3) {
+         * es = l1 != l2;
+         * es = l2 != l3;
+         * System.out.println("O triangulo é escaleno: " + es);
+         * }
+         */
 
-        int a = 5;
-        int b = 8;
-        int c = 10;
-        int r;
-        boolean m;
+        // Exercicios
+        // conversor de moedas
+        /*
+         * double reais;
+         * System.out.println("Quantos reais?");
+         * reais = sc.nextDouble();
+         * double calculo = (reais / 6.17);
+         * 
+         * System.out.println("Para dólar: " + String.format("%.2f", calculo));
+         */
 
-        m = a != b;
-        System.out.println(m);
+        // converter temperatura
+        /*
+         * int fahrenheit;
+         * double calculo;
+         * System.out.println("Informe o Fahrenheit: ");
+         * fahrenheit = sc.nextInt();
+         * 
+         * calculo = (5.0 / 9.0) * (fahrenheit - 32);
+         * System.out.println("A temperatura em Celcius é: " + String.format("%.2f",
+         * calculo));
+         */
 
-        // Maior que ou igual (>=)
-        m = b >= a;
-        System.out.println(m);
-        // Menor que ou igual (<=)
-        m = a <= b;
-        System.out.println(m);
+        // porcentagem preços de imposto
+        double percentual, preco_com_imposto;
+        double preco;
 
-        m = a == b;
-        boolean am = c > a;
-        System.out.println(m);
-        System.out.println(am);
+        System.out.println("Qual o preço do produto? US$");
+        preco = sc.nextDouble();
 
-        // Atribuição de adição
-        int d, e, f, g;
+        if (preco == 50) {
+            percentual = 20;
+            double calculo = (preco * percentual) / 100;
+            preco_com_imposto = preco + calculo;
+            System.out.println("O valor total com imposto: " + String.format("%.2f", preco_com_imposto));
 
-        d = 10;
-        e = 10;
-        f = 5;
-
-        int mar = d + f;
-        d += f;
-
-        int ma = d - f;
-        d -= f;
-
-        System.out.println(mar);
-        System.out.println(d);
-
-        System.out.println(ma);
-        System.out.println(d);
-
-        int l1, l2, l3;
-        boolean eq, es;
-        System.out.println("Digite o primeiro lado: ");
-        l1 = sc.nextInt();
-        System.out.println("Digite o segundo lado: ");
-        l2 = sc.nextInt();
-        System.out.println("Digite o terceiro lado: ");
-        l3 = sc.nextInt();
-
-        if (l1 == l2 && l2 == l3) {
-            eq = l1 == l2;
-            eq = l2 == l3;
-            System.out.println("O triangulo é equilatero: " + eq);
-        } else if (l1 != l2 && l2 != l3) {
-            es = l1 != l2;
-            es = l2 != l3;
-            System.out.println("O triangulo é escaleno: " + es);
+        } else if (preco > 50.01 && preco <= 3000) {
+            percentual = 60;
+            double calculo = (preco * percentual) / 100;
+            preco_com_imposto = preco + calculo;
+            System.out.println("O valor total com imposto: " + String.format("%.2f", preco_com_imposto));
         }
+
         sc.close();
     }
 }
