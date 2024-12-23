@@ -114,9 +114,71 @@
         }
       }
 
-      porcentagem();
+      //Estruturas condicionais
+      /*var ano, nasc, idade;
 
-      //empréstimo
+      ano = prompt("Em que ano estamos? ");
+      nasc = prompt("Em que ano nasceu? ");
+
+      idade = ano - nasc;
+
+      alert("Em " + ano + " você terá " + idade + " anos.");
+
+      if (idade >= 21) {
+        alert("E você já terá atingido a maior idade.");
+      }*/
+
+      /*var numero = parseInt(prompt("Digite um número qualquer: "));
+      if (numero % 2 == 0) {
+        prompt("O número " + numero + " é PAR");
+      } else {
+        prompt("O número " + numero + " é IMPAR");
+      }*/
+
+      /*var m, a, imc;
+
+      m = parseFloat(prompt("Mass (Kg): "));
+      a = parseFloat(prompt("Altura (m): "));
+
+      imc = m / Math.pow(a, 2);
+      alert("IMC: " + imc.toFixed(2));
+      if (imc < 17) {
+        alert("Muito abaixo do peso.");
+      } else if (imc >= 17 && imc <= 18.5) {
+        alert("Abaixo do peso.");
+      } else if (imc >= 18.5 && imc <= 25) {
+        alert("Parabens! Você está no seu peso ideal");
+      } else if (imc >= 25 && imc <= 30) {
+        alert("Sobrepeso");
+      } else if (imc >= 30 && imc <= 35) {
+        alert("Obesidade.");
+      } else if (imc >= 35 && imc <= 40) {
+        alert("Obesidade severa.");
+      } else if (imc >= 40) {
+        alert("Obesidade Mórbida.");
+      }*/
+
+      /*var anoAtual = parseInt(prompt("Ano Atual (YYYY): "));
+      var anoNascimento = parseInt(prompt("Ano nascimento (YYYY): "));
+
+      var idade = anoAtual - anoNascimento;
+
+      if (idade >= 18) {
+        alert("Apto a tirar carteira." + " Idade: " + idade);
+      } else {
+        alert("Inapto a tirar carteira." + " Idade: " + idade);
+      }*/
+
+      var nota1 = parseFloat(prompt("Primeira nota: "));
+      var nota2 = parseFloat(prompt("Segunda nota: "));
+
+      var calculo = (nota1 + nota2) / 2;
+
+      if (calculo >= 6) {
+        alert("Aluno aprovado." + " Nota: " + calculo.toFixed(2));
+      } else {
+        alert("Aluno reprovado." + " Nota: " + calculo.toFixed(2));
+      }
     </script>
   </body>
 </html>

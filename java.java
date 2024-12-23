@@ -153,23 +153,120 @@ public class java {
          */
 
         // porcentagem preços de imposto
-        double percentual, preco_com_imposto;
-        double preco;
+        // double percentual, preco_com_imposto;
+        // double preco;
 
-        System.out.println("Qual o preço do produto? US$");
-        preco = sc.nextDouble();
+        /*
+         * System.out.println("Qual o preço do produto? US$");
+         * preco = sc.nextDouble();
+         * 
+         * if (preco == 50) {
+         * percentual = 20;
+         * double calculo = (preco * percentual) / 100;
+         * preco_com_imposto = preco + calculo;
+         * System.out.println("O valor total com imposto: " + String.format("%.2f",
+         * preco_com_imposto));
+         * 
+         * } else if (preco > 50.01 && preco <= 3000) {
+         * percentual = 60;
+         * double calculo = (preco * percentual) / 100;
+         * preco_com_imposto = preco + calculo;
+         * System.out.println("O valor total com imposto: " + String.format("%.2f",
+         * preco_com_imposto));
+         * }
+         */
 
-        if (preco == 50) {
-            percentual = 20;
-            double calculo = (preco * percentual) / 100;
-            preco_com_imposto = preco + calculo;
-            System.out.println("O valor total com imposto: " + String.format("%.2f", preco_com_imposto));
+        // Estruturas condicionais
+        /*
+         * int ano, nasc, idade;
+         * 
+         * System.out.println("Em que ano estamos?");
+         * ano = sc.nextInt();
+         * System.out.println("Em que ano nasceu?");
+         * nasc = sc.nextInt();
+         * 
+         * idade = ano - nasc;
+         * 
+         * System.out.println("Em " + ano + " você terá " + idade + " anos.");
+         * if (idade >= 21) {
+         * System.out.println("Você atingiu a maior idade." + " idade, " + idade);
+         * }
+         */
 
-        } else if (preco > 50.01 && preco <= 3000) {
-            percentual = 60;
-            double calculo = (preco * percentual) / 100;
-            preco_com_imposto = preco + calculo;
-            System.out.println("O valor total com imposto: " + String.format("%.2f", preco_com_imposto));
+        /*
+         * int valor;
+         * System.out.println("Digite um número qualquer: ");
+         * valor = sc.nextInt();
+         * 
+         * if (valor % 2 == 0) {
+         * System.out.println("O número " + valor + " é PAR");
+         * } else {
+         * System.out.println("O número " + valor + " é IMPAR");
+         * }
+         */
+
+        /*
+         * float m, a;
+         * double imc;
+         * 
+         * System.out.println("Mass (Kg): ");
+         * m = sc.nextFloat();
+         * 
+         * System.out.println("Altura (m): ");
+         * a = sc.nextFloat();
+         * 
+         * imc = m / Math.pow(a, 2);
+         * 
+         * System.out.println("IMC: " + String.format("%.2f", imc));
+         * 
+         * if (imc < 17) {
+         * System.out.println("Muito abaixo do peso.");
+         * } else if (imc >= 17 && imc <= 18.5) {
+         * System.out.println("Abaixo do peso.");
+         * } else if (imc >= 18.5 && imc <= 25) {
+         * System.out.println("Parabens! Você está no seu peso ideal");
+         * } else if (imc >= 25 && imc <= 30) {
+         * System.out.println("Sobrepeso.");
+         * } else if (imc >= 30 && imc <= 35) {
+         * System.out.println("Obesidade.");
+         * } else if (imc >= 35 && imc <= 40) {
+         * System.out.println("Obesidade severa.");
+         * } else if (imc >= 40) {
+         * System.out.println("Obesidade Mórbida.");
+         * }
+         */
+
+        /*
+         * int anoAtual, anoNascimento, idade;
+         * 
+         * System.out.println("Ano atual (YYYY): ");
+         * anoAtual = sc.nextInt();
+         * System.out.println("Ano nascimento (YYYY): ");
+         * anoNascimento = sc.nextInt();
+         * 
+         * idade = anoAtual - anoNascimento;
+         * 
+         * if (idade >= 18) {
+         * System.out.println("Apto a tirar carteira." + " Idade: " + idade);
+         * } else {
+         * System.out.println("Inapto a tirar carteira." + " Idade: " + idade);
+         * }
+         */
+
+        float nota1, nota2;
+        double calculo;
+
+        System.out.println("Primeira nota: ");
+        nota1 = sc.nextFloat();
+        System.out.println("Segunda nota: ");
+        nota2 = sc.nextFloat();
+
+        calculo = (nota1 + nota2) / 2;
+
+        if (calculo >= 6) {
+            System.out.println("Aluno aprovado." + " Nota: " + String.format("%.2f", calculo));
+        } else {
+            System.out.println("Aluno reprovado." + " Nota: " + String.format("%.2f", calculo));
         }
 
         sc.close();
