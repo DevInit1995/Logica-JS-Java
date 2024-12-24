@@ -253,22 +253,174 @@ public class java {
          * }
          */
 
-        float nota1, nota2;
-        double calculo;
+        /*
+         * float nota1, nota2;
+         * double calculo;
+         * 
+         * System.out.println("Primeira nota: ");
+         * nota1 = sc.nextFloat();
+         * System.out.println("Segunda nota: ");
+         * nota2 = sc.nextFloat();
+         * 
+         * calculo = (nota1 + nota2) / 2;
+         * 
+         * if (calculo >= 6) {
+         * System.out.println("Aluno aprovado." + " Nota: " + String.format("%.2f",
+         * calculo));
+         * } else {
+         * System.out.println("Aluno reprovado." + " Nota: " + String.format("%.2f",
+         * calculo));
+         * }
+         */
 
-        System.out.println("Primeira nota: ");
-        nota1 = sc.nextFloat();
-        System.out.println("Segunda nota: ");
-        nota2 = sc.nextFloat();
+        /*
+         * float n1, n2, m;
+         * 
+         * System.out.println("Primeira nota: ");
+         * n1 = sc.nextFloat();
+         * System.out.println("Segunda nota: ");
+         * n2 = sc.nextFloat();
+         * 
+         * m = (n1 + n2) / 2;
+         * 
+         * System.out.println("A média do aluno foi " + String.format("%.2f", m));
+         * 
+         * if (m >= 7) {
+         * System.out.println("Aluno aprovado");
+         * } else {
+         * if (m >= 5 && m < 7) {
+         * System.out.println("Aluno em RECUPERAÇÃO");
+         * } else {
+         * System.out.println("Aluno REPROVADO");
+         * }
+         * }
+         */
 
-        calculo = (nota1 + nota2) / 2;
+        /*
+         * System.out.println("CRIANÇA ESPERANAÇA");
+         * 
+         * int d;
+         * System.out.println("Muito obrigado por ajudar \n " +
+         * "[1] para doar R$10 \n " +
+         * "[2] para doar R$25 \n " +
+         * "[3] para doar R$50 \n " +
+         * "[4] para doar outro valor \n " +
+         * "[5] para cancelar");
+         * 
+         * d = sc.nextInt();
+         * 
+         * int valor = 0;
+         * switch (d) {
+         * case 1:
+         * valor = 10;
+         * break;
+         * case 2:
+         * valor = 25;
+         * break;
+         * case 3:
+         * valor = 50;
+         * break;
+         * case 4:
+         * System.out.println("Qual o valor da doação? R$");
+         * valor = sc.nextInt();
+         * break;
+         * case 5:
+         * valor = 0;
+         * break;
+         * }
+         * System.out.println("Sua doação foi de R$ " + valor);
+         * System.out.println("Muito obrigado!");
+         */
 
-        if (calculo >= 6) {
-            System.out.println("Aluno aprovado." + " Nota: " + String.format("%.2f", calculo));
+        /*
+         * String nome;
+         * float sal;
+         * int dep;
+         * System.out.println("Qual o nome do Funcionário?");
+         * nome = sc.nextLine();
+         * System.out.println("Qual o salário do Funcionário?");
+         * sal = sc.nextFloat();
+         * System.out.println("Qual á quantidade de dependentes?");
+         * dep = sc.nextInt();
+         * 
+         * float nSal;
+         * switch (dep) {
+         * case 0:
+         * nSal = sal + (sal * 5) / 100;
+         * break;
+         * case 1:
+         * case 2:
+         * case 3:
+         * nSal = sal + (sal * 10) / 100;
+         * break;
+         * case 4:
+         * case 5:
+         * case 6:
+         * nSal = sal + (sal * 15) / 100;
+         * break;
+         * default:
+         * nSal = sal + (sal * 18) / 100;
+         * }
+         * 
+         * System.out.println("O novo salário de " + nome + " será de R$ " +
+         * String.format("%.2f", nSal));
+         */
+
+        /*
+         * float nota1, nota2, media;
+         * 
+         * System.out.println("Informe a primeira nota: ");
+         * nota1 = sc.nextInt();
+         * System.out.println("Informe a segunda nota: ");
+         * nota2 = sc.nextInt();
+         * media = (nota1 + nota2) / 2;
+         * 
+         * if (media == 10 || media == 9) {
+         * System.out.println("A");
+         * } else if (media == 8.9 || media == 8) {
+         * System.out.println("B");
+         * } else if (media == 7.9 || media == 7) {
+         * System.out.println("C");
+         * } else if (media == 6.5 || media == 6) {
+         * System.out.println("D");
+         * } else if (media == 5.9 || media == 5) {
+         * System.out.println("E");
+         * } else if (media < 5) {
+         * System.out.println("F");
+         * }
+         */
+
+        int diferenca, golsB, golsM;
+        System.out.println("Quantos gols do Bangu: ");
+        golsB = sc.nextInt();
+        System.out.println("Quantos gols do Madureira: ");
+        golsM = sc.nextInt();
+
+        if (golsB > golsM) {
+            diferenca = golsB - golsM;
         } else {
-            System.out.println("Aluno reprovado." + " Nota: " + String.format("%.2f", calculo));
+            diferenca = golsM - golsB;
         }
 
+        System.out.println("Diferença: " + diferenca);
+        switch (diferenca) {
+            case 0:
+                System.out.println("STATUS: EMPATE");
+                break;
+            case 1:
+            case 2:
+            case 3:
+                System.out.println("STATUS: PARTIDA NORMAL");
+                break;
+            case 4:
+            case 5:
+            case 6:
+                System.out.println("STATUS: GOLEADA");
+            default:
+                System.out.println("STATUS: ALGO INCOMUM.");
+                System.out.println("Você digitou os dados corretos?");
+                break;
+        }
         sc.close();
     }
 }

@@ -93,7 +93,7 @@
       var fahrenheit = parseInt(prompt("Informe o Fahrenheit: "));
       var calculo = (5 / 9) * (fahrenheit - 32);
       alert("A temperatura em Fahrenheit é: " + calculo.toFixed(2));*/
-
+      /*
       //porcentagem preços de imposto
       function porcentagem() {
         var percentual;
@@ -112,7 +112,7 @@
           preco_com_imposto = preco + calculo;
           alert("O valor total com imposto: " + preco_com_imposto.toFixed(2));
         }
-      }
+      }*/
 
       //Estruturas condicionais
       /*var ano, nasc, idade;
@@ -169,7 +169,7 @@
         alert("Inapto a tirar carteira." + " Idade: " + idade);
       }*/
 
-      var nota1 = parseFloat(prompt("Primeira nota: "));
+      /*var nota1 = parseFloat(prompt("Primeira nota: "));
       var nota2 = parseFloat(prompt("Segunda nota: "));
 
       var calculo = (nota1 + nota2) / 2;
@@ -178,7 +178,130 @@
         alert("Aluno aprovado." + " Nota: " + calculo.toFixed(2));
       } else {
         alert("Aluno reprovado." + " Nota: " + calculo.toFixed(2));
+      }*/
+
+      /*var n1, n2, m;
+      var n1 = parseFloat(prompt("Primeira nota: "));
+      var n2 = parseFloat(prompt("Segunda nota: "));
+
+      m = (n1 + n2) / 2;
+
+      alert("A média do aluno foi " + m.toFixed(2));
+      if (m >= 7) {
+        alert("Aluno aprovado");
+      } else {
+        if (m >= 5 && m < 7) {
+          alert("Aluno em RECUPERAÇÃO");
+        } else {
+          alert("Aluno REPROVADO");
+        }
+      }*/
+
+      /*alert("CRIANÇA ESPERANÇA");
+      var d = parseInt(
+        prompt(
+          "Muito obrigado por ajudar \n " +
+            "[1] para doar R$10 \n " +
+            "[2] para doar R$25 \n " +
+            "[3] para doar R$50 \n " +
+            "[4] para doar R$25 \n " +
+            "[5] para cancelar"
+        )
+      );
+
+      var valor;
+      switch (d) {
+        case 1:
+          valor = 10;
+          break;
+        case 2:
+          valor = 25;
+          break;
+        case 3:
+          valor = 50;
+          break;
+        case 4:
+          valor = parseFloat(prompt("Qual o valor da doação? R$"));
+          break;
+        case 5:
+          valor = 0;
+          break;
       }
+      alert("Sua doação foi de R$ " + valor);
+      alert("Muito obrigado!");*/
+
+      /*
+      var nome = prompt("Qual o nome do Funcionário?");
+      var sal = parseFloat(prompt("Qual o salário do Funcionário?"));
+      var dep = parseInt(prompt("Qual á a quantidade de dependentes?"));
+
+      var nSal;
+      switch (dep) {
+        case 0:
+          nSal = sal + (sal * 5) / 100;
+          break;
+        case 1:
+        case 2:
+        case 3:
+          nSal = sal + (sal * 10) / 100;
+          break;
+        case 4:
+        case 5:
+        case 6:
+          nSal = sal + (sal * 15) / 100;
+          break;
+        default:
+          nSal = sal + (sal * 18) / 100;
+      }
+      alert("O novo salário de " + nome + " será de R$ " + nSal.toFixed(2));*/
+
+      /*var nota1 = parseFloat(prompt("Informe a primeira nota: "));
+      var nota2 = parseFloat(prompt("Informe a segunda nota: "));
+      var media = (nota1 + nota2) / 2;
+
+      if (media == 10 || media == 9) {
+        alert("A");
+      } else if (media == 8.9 || media == 8) {
+        alert("B");
+      } else if (media == 7.9 || media == 7) {
+        alert("C");
+      } else if (media == 6.5 || media == 6) {
+        alert("D");
+      } else if (media == 5.9 || media == 5) {
+        alert("E");
+      } else if (media < 5) {
+        alert("F");
+      }*/
+
+      /*var diferenca;
+      var golsB = parseInt(prompt("Quantos gols do Bangu: "));
+      var golsM = parseInt(prompt("Quantos gols do Madureira: "));
+
+      if (golsB > golsM) {
+        diferenca = golsB - golsM;
+      } else {
+        diferenca = golsM - golsB;
+      }
+
+      alert("Diferença: " + diferenca);
+      switch (diferenca) {
+        case 0:
+          alert("STATUS: EMPATE");
+          break;
+        case 1:
+        case 2:
+        case 3:
+          alert("STATUS: PARTIDA NORMAL");
+          break;
+        case 4:
+        case 5:
+        case 6:
+          alert("STATUS: GOLEADA");
+          break;
+        default:
+          alert("STATUS: ALGO INCOMUM.");
+          alert("Você digitou os dados corretos?");
+      }*/
     </script>
   </body>
 </html>
