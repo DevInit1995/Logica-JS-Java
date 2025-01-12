@@ -302,6 +302,119 @@
           alert("STATUS: ALGO INCOMUM.");
           alert("Você digitou os dados corretos?");
       }*/
+
+      //Estruturas de repetição
+      /*for (var i = 0; i <= 10; i++) {
+        console.log(i);
+      }
+
+      var i = 0;
+      while (i <= 10) {
+        console.log(i);
+        i++;
+      }
+
+      var x = 10;
+      while (x >= 0) {
+        console.log(x);
+        x--;
+      }
+
+      var valor = prompt("Informe um valor: ");
+      a = 0;
+      while (a <= valor) {
+        alert(valor);
+        a++;
+      }*/
+
+      /*var valores = []; // Array para armazenar os valores inseridos
+      var soma = 0; // Variável para armazenar a soma dos valores
+      var i = 1; // Contador para controlar as iterações
+
+      // Loop 'while' para solicitar 10 valores
+      while (i <= 10) {
+        var valor = parseInt(prompt("Informe o " + i + "° valor:"));
+        //valor = Number(valor); // Converte o valor para número
+
+        // Verifica se o valor informado é um número válido
+        if (isNaN(valor)) {
+          console.log("Por favor, informe um número válido.");
+        } else {
+          valores.push(valor); // Adiciona o valor ao array
+          soma += valor; // Adiciona o valor à soma
+          i++; // Incrementa o contador
+        }
+      }
+
+      // Calcula a média dos valores
+      var media = soma / valores.length;
+
+      // Exibe a soma e a média
+      console.log("Valores informados: " + valores);
+      console.log("Soma dos valores: " + soma);
+      console.log("Média dos valores: " + media);
+      */
+
+      /*var soma = 0;
+      var b = 1;
+      var valor;
+      var valores = [];
+      var maior = 0;
+
+      while (b <= 10) {
+        valor = parseInt(prompt("Informe o " + b + "° valor"));
+        valores.push(valor);
+        if (valor > maior) {
+          maior = valor;
+        }
+        soma = soma + valor;
+        b++;
+        console.log("A soma entre os valores é: " + soma);
+      }
+      console.log("O maior valor digitado é: " + maior);*/
+
+      /*var real,
+        dolar,
+        cotacao = 1,
+        conta;
+
+      conta = parseInt(prompt("Quantas conversões deseja realizar?"));
+      while (cotacao <= conta) {
+        real = parseFloat(prompt("Informe um valor em R$ para converter: "));
+        dolar = real / 6.2;
+        alert("O valor convertido em US$ é: " + dolar.toFixed(2));
+        cotacao = cotacao + 1;
+      }*/
+
+      /*var inicio, fim;
+
+      inicio = parseInt(prompt("Informe o inicio: "));
+      fim = parseInt(prompt("Informe o fim da contagem: "));
+      //debugger;
+      console.log("CONTANDO: ");
+      while (inicio <= fim) {
+        console.log(inicio + "..");
+        inicio++;
+      }*/
+
+      var conta = 1,
+        maior = 0;
+      var valores = [];
+      var nome;
+      var nota;
+
+      var quantidade = parseInt(prompt("Quantos alunos a turma tem?"));
+      while (conta <= quantidade) {
+        alert("ALUNO: " + conta);
+        nome = prompt("Nome do aluno: ");
+        nota = parseFloat(prompt("Informe a nota: "));
+        valores.push(nota);
+        if (nota > maior) {
+          maior = nota;
+        }
+        conta++;
+      }
+      alert("O aluno com a maior nota é o " + nome + " e sua nota é " + maior);
     </script>
   </body>
 </html>

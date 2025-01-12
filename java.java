@@ -390,37 +390,148 @@ public class java {
          * }
          */
 
-        int diferenca, golsB, golsM;
-        System.out.println("Quantos gols do Bangu: ");
-        golsB = sc.nextInt();
-        System.out.println("Quantos gols do Madureira: ");
-        golsM = sc.nextInt();
+        /*
+         * int diferenca, golsB, golsM;
+         * System.out.println("Quantos gols do Bangu: ");
+         * golsB = sc.nextInt();
+         * System.out.println("Quantos gols do Madureira: ");
+         * golsM = sc.nextInt();
+         * 
+         * if (golsB > golsM) {
+         * diferenca = golsB - golsM;
+         * } else {
+         * diferenca = golsM - golsB;
+         * }
+         * 
+         * System.out.println("Diferença: " + diferenca);
+         * switch (diferenca) {
+         * case 0:
+         * System.out.println("STATUS: EMPATE");
+         * break;
+         * case 1:
+         * case 2:
+         * case 3:
+         * System.out.println("STATUS: PARTIDA NORMAL");
+         * break;
+         * case 4:
+         * case 5:
+         * case 6:
+         * System.out.println("STATUS: GOLEADA");
+         * default:
+         * System.out.println("STATUS: ALGO INCOMUM.");
+         * System.out.println("Você digitou os dados corretos?");
+         * break;
+         * }
+         */
 
-        if (golsB > golsM) {
-            diferenca = golsB - golsM;
-        } else {
-            diferenca = golsM - golsB;
-        }
+        // ESTRUTURAS DE REPETIÇÃO
+        /*
+         * for (int i = 0; i <= 10; i++) {
+         * System.out.println(i);
+         * }
+         */
 
-        System.out.println("Diferença: " + diferenca);
-        switch (diferenca) {
-            case 0:
-                System.out.println("STATUS: EMPATE");
-                break;
-            case 1:
-            case 2:
-            case 3:
-                System.out.println("STATUS: PARTIDA NORMAL");
-                break;
-            case 4:
-            case 5:
-            case 6:
-                System.out.println("STATUS: GOLEADA");
-            default:
-                System.out.println("STATUS: ALGO INCOMUM.");
-                System.out.println("Você digitou os dados corretos?");
-                break;
+        /*
+         * int i = 0;
+         * while (i <= 10) {
+         * System.out.println(i);
+         * i++;
+         * }
+         */
+
+        /*
+         * int x = 10;
+         * while (x >= 0) {
+         * System.out.println(x);
+         * x--;
+         * }
+         */
+
+        /*
+         * int valor;
+         * int a = 0;
+         * System.out.println("Informe um valor: ");
+         * valor = sc.nextInt();
+         * 
+         * while (a <= valor) {
+         * System.out.println(a);
+         * a++;
+         * }
+         */
+
+        /*
+         * int soma = 0;
+         * int i = 1;
+         * int valor;
+         * 
+         * while (i <= 10) {
+         * System.out.println("Informe o " + i + "° valor: ");
+         * valor = sc.nextInt();
+         * soma = soma + valor;
+         * i++;
+         * }
+         * System.out.println("O resultado da soma dos valores é: " + soma);
+         */
+
+        /*
+         * float real,
+         * dolar,
+         * contacao = 1,
+         * conta;
+         * 
+         * System.out.println("Quantas conversões deseja realizar?");
+         * conta = sc.nextFloat();
+         * 
+         * while (contacao <= conta) {
+         * System.out.println("Informe o valor em R$ para converter: ");
+         * real = sc.nextFloat();
+         * 
+         * dolar = real / 6.2f;
+         * contacao++;
+         * System.out.println("O valor covertido em US$ é: " + String.format("%2f",
+         * dolar));
+         * }
+         */
+
+        /*
+         * int inicio,
+         * fim;
+         * System.out.println("Informe o inicio: ");
+         * inicio = sc.nextInt();
+         * System.out.println("Informe o fim da contagem: ");
+         * fim = sc.nextInt();
+         * System.out.println("CONTANDO: ");
+         * while (inicio <= fim) {
+         * System.out.println(inicio + "..");
+         * inicio++;
+         * }
+         */
+
+        int conta = 1,
+                valores[],
+                quantidade;
+        float nota,
+                maior = 0;
+        String nome = "";
+
+        System.out.println("Quantos alunos a turma tem?");
+        quantidade = sc.nextInt();
+
+        while (conta <= quantidade) {
+            System.out.println("ALUNO: " + conta);
+            System.out.println("Nome do aluno: ");
+            nome = sc.next();
+            System.out.println("Informe a nota: ");
+            nota = sc.nextFloat();
+
+            if (nota > maior) {
+                maior = nota;
+            }
+            conta++;
         }
+        System.out.println("O aluno com a maior nota é o: " + nome +
+                " e sua nota é: " + maior);
+
         sc.close();
     }
 }
