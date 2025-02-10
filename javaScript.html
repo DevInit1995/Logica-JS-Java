@@ -397,7 +397,7 @@
         inicio++;
       }*/
 
-      var conta = 1,
+      /*var conta = 1,
         maior = 0;
       var valores = [];
       var nome;
@@ -414,7 +414,288 @@
         }
         conta++;
       }
-      alert("O aluno com a maior nota é o " + nome + " e sua nota é " + maior);
+      alert("O aluno com a maior nota é o " + nome + " e sua nota é " + maior);*/
+
+      /*
+      let decide = "s";
+      let soma = 0;
+      while (decide == "s") {
+        let numero,
+          conta = 1;
+
+        alert("Digite o valor ==> ");
+        numero = parseInt(prompt("Valor:"));
+
+        soma = soma + numero;
+        conta++;
+
+        decide = prompt("Quer continuar? [s/n]");
+      }
+      alert("A soma de todos os valores digitados e " + soma);*/
+
+      /*let conta = 1;
+      let resultado;
+
+      let numero = parseInt(prompt("Quer ver a tabuada de qual número?"));
+      do {
+        resultado = numero * conta;
+        console.log(numero + " X " + conta + " = " + resultado);
+        conta++;
+      } while (conta <= 10);*/
+
+      //total número negativos
+      /*let contador = 1,
+        totalNegativos = 0;
+
+      do {
+        let numero = parseInt(prompt("Informe um número: "));
+
+        if (numero <= 0) {
+          totalNegativos++;
+        }
+        contador++;
+      } while (contador <= 5);
+      console.log("Foram digitados: " + totalNegativos + " valores negativos.");
+      */
+
+      /*let conta,
+        numero,
+        fatorial = 1;
+      let continua = "s";
+
+      do {
+        numero = parseInt(prompt("Digite um número: "));
+        conta = numero;
+        do {
+          fatorial = fatorial * conta;
+          console.log(conta + " x ");
+          conta--;
+        } while (conta >= 1);
+        console.log(" O fatorial do valor: " + numero + " é " + fatorial);
+        continua = prompt("Quer continuar? [s/n]");
+      } while (continua == "s");*/
+
+      /*let conta = 1,
+        contaDiv = 0;
+
+      let numero = parseInt(prompt("Digite um número: "));
+
+      do {
+        console.log(conta);
+        if (numero % conta == 0) {
+          contaDiv = contaDiv + 1;
+        }
+        conta++;
+      } while (conta <= numero);
+
+      console.log("Ao todo existem " + contaDiv + " valores divisiveis.");
+
+      if (contaDiv > 2) {
+        console.log("O valor " + numero + " não é primo!");
+      } else {
+        console.log("O valor " + numero + " é primo!");
+      }*/
+
+      // opção contador
+      /*let conta,
+        sair = "s";
+      do {
+        let opcao = parseInt(
+          prompt(
+            "Informe a opção: " + "\n" + "[1] De 1 a 10 \n" + "[2] De 10 a 1"
+          )
+        );
+        if (opcao == 1) {
+          for (conta = 1; conta <= 10; conta++) {
+            console.log(conta + " .. ");
+          }
+        } else if (opcao == 2) {
+          for (conta = 10; conta >= 1; conta--) {
+            console.log(conta + " .. ");
+          }
+        }
+        sair = prompt("[s/n] Deseja continuar?");
+      } while (sair == "s");*/
+
+      //seletor de pessoas
+      /*let sexo,
+        idade,
+        corCabelo,
+        continua = "s",
+        contaM = 0;
+      contaF = 0;
+      let pessoas = [];
+
+      do {
+        sexo = prompt("Qual o seu sexo? [M/F]");
+        idade = parseInt(prompt("Qual a idade?"));
+        corCabelo = parseInt(
+          prompt(
+            "Qual a cor do Cabelo? \n[1] Preto \n[2] Castanho \n[3] Loiro \n[4] Ruivo"
+          )
+        );
+
+        pessoas.push({ sexo, idade, corCabelo });
+
+        if (sexo.toLowerCase() === "m" && idade > 18 && corCabelo === 2) {
+          contaM++;
+        } else if (
+          sexo.toLocaleLowerCase() === "f" &&
+          idade >= 25 &&
+          idade <= 30 &&
+          corCabelo === 3
+        ) {
+          contaF++;
+        }
+
+        continua = prompt("Quer continuar [s/n]");
+      } while (continua.toLowerCase() === "s");
+
+      alert(
+        `Número de homens com mais de 18 anos e cabelos castanhos: ${contaM}`
+      );
+      alert(
+        `Número de mulheres entre 25 a 30 anos e cabelos loiros: ${contaF}`
+      );*/
+
+      /*for (let c = 1; c <= 10; c += 2) {
+        console.log(c);
+      }*/
+
+      /*for (let c = 10; c >= 1; c--) {
+        console.log(c);
+      }*/
+
+      /*let numero,
+        conta,
+        soma = 0;
+
+      for (conta = 1; conta <= 5; ) {
+        debugger;
+        while (conta <= 5) {
+          numero = parseInt(prompt("Digite um valor: "));
+          soma = soma + numero;
+          conta = conta + 1;
+        }
+        alert("A soma dos valores é: " + soma);
+      }*/
+
+      /*let numero,
+        soma = 0,
+        continua;
+      do {
+        numero = parseInt(prompt("Digite um valor: "));
+        soma = soma + numero;
+
+        continua = prompt("Quer continuar? (S/N) ");
+      } while (continua.toLowerCase() === "s");
+      alert("A soma dos valores é " + soma);*/
+
+      //Números pares
+      /*let conta;
+      let valor = parseInt(prompt("Digite um valor: "));
+
+      if (valor % 2 == 1) {
+        valor--;
+      }
+
+      for (conta = valor; conta >= 0; conta -= 2) {
+        console.log(conta);
+      }*/
+
+      /*let totalDez = 0;
+      let simp = 0;
+      for (let conta = 1; conta <= 6; conta++) {
+        let valor = parseInt(prompt("Digite um valor: "));
+        if (valor >= 0 && valor <= 10) {
+          totalDez = totalDez + 1;
+          if (valor % 2 == 1) {
+            simp = simp + valor;
+          }
+        }
+      }
+      alert("Ao todo foram " + totalDez + " valores entre 0 e 10");
+      alert("Nesse intervalo, a soma de impares foi: " + simp);*/
+
+      /*//combinações
+      debugger;
+      for (let c1 = 1; c1 <= 3; c1++) {
+        for (let c2 = 1; c2 <= 3; c2++) {
+          console.log(c1, c2);
+        }
+      }*/
+
+      /*//fibonacci
+      let n,
+        aa = 0,
+        bb = 1,
+        cc;
+      if (n <= 1) {
+        console.log(n);
+      }
+
+      function fibonacci(n) {
+        // Os dois primeiros números da sequência
+        let fib = [0, 1];
+
+        for (let i = 2; i < n; i++) {
+          // Soma dos dois números anteriores
+          fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        return fib;
+      }
+
+      console.log(fibonacci(20));*/
+
+      //em erro
+      /*
+      //analisador de valores
+      let continua = "s";
+
+      do {
+        let valores = [];
+        let soma = 0,
+          media = 0;
+        let contaDiv = 0,
+          valor;
+        let quantidade = parseInt(prompt("Quantos valores deseja informar?"));
+
+        //verifica se a quantidade inserida é válida
+        if (isNaN(quantidade) || quantidade <= 0) {
+          alert("Por favor, insira um número válido de valores.");
+          break;
+        }
+
+        for (let conta = 1; conta <= quantidade; conta++) {
+          debugger;
+          valor = parseInt(prompt("Informe o " + conta + "° valor"));
+
+          if (isNaN(valor)) {
+            alert("Por favor, insira um valor numérico.");
+            conta--;
+            break;
+          }
+
+          valores.push(valor);
+          soma += valor;
+        }
+
+        for (let i = 0; i < valores.length; i++) {
+          if (valores[i] % 5 === 0) {
+            contaDiv++;
+          }
+        }
+
+        media = soma / quantidade;
+
+        alert("A soma dos valores informados é: " + soma);
+        alert("A média dos valores informados é: " + media.toFixed(3));
+        alert("A quantidade de valores divisíveis por 5 são: " + contaDiv);
+        continua = prompt("Deseja continuar [s/n]");
+      } while (continua.toLowerCase() == "s");
+       */
+      //quantos são nulos
+      //soma de pares
     </script>
   </body>
 </html>
