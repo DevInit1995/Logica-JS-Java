@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.lang.Math;
+import java.util.*;
 
 public class java {
     public String nome;
@@ -507,31 +507,288 @@ public class java {
          * }
          */
 
-        int conta = 1,
-                valores[],
-                quantidade;
-        float nota,
-                maior = 0;
-        String nome = "";
+        /*
+         * *
+         * int conta = 1,
+         * valores[],
+         * quantidade;
+         * float nota,
+         * maior = 0;
+         * String nome = "";
+         * 
+         * System.out.println("Quantos alunos a turma tem?");
+         * quantidade = sc.nextInt();
+         * 
+         * while (conta <= quantidade) {
+         * System.out.println("ALUNO: " + conta);
+         * System.out.println("Nome do aluno: ");
+         * nome = sc.next();
+         * System.out.println("Informe a nota: ");
+         * nota = sc.nextFloat();
+         * 
+         * if (nota > maior) {
+         * maior = nota;
+         * }
+         * conta++;
+         * }
+         * System.out.println("O aluno com a maior nota é o: " + nome +
+         * " e sua nota é: " + maior);
+         */
 
-        System.out.println("Quantos alunos a turma tem?");
-        quantidade = sc.nextInt();
+        // do-while
+        /*
+         * int conta = 1, resultado, numero;
+         * 
+         * System.out.println("Quer ver a tabuada de qual número: ");
+         * numero = sc.nextInt();
+         * 
+         * do {
+         * resultado = numero * conta;
+         * System.out.println(numero + " X " + conta + " = " + resultado);
+         * conta++;
+         * } while (conta <= 10);
+         */
 
-        while (conta <= quantidade) {
-            System.out.println("ALUNO: " + conta);
-            System.out.println("Nome do aluno: ");
-            nome = sc.next();
-            System.out.println("Informe a nota: ");
-            nota = sc.nextFloat();
+        /*
+         * // total de números negativos
+         * int contador = 0, totalNegativos = 0;
+         * 
+         * do {
+         * int numero;
+         * System.out.println("Informe um número: ");
+         * numero = sc.nextInt();
+         * 
+         * if (numero <= 0) {
+         * totalNegativos++;
+         * }
+         * contador++;
+         * } while (contador <= 5);
+         * System.out.println("Foram digitados: " + totalNegativos +
+         * " valores negativos.");
+         */
 
-            if (nota > maior) {
-                maior = nota;
-            }
-            conta++;
-        }
-        System.out.println("O aluno com a maior nota é o: " + nome +
-                " e sua nota é: " + maior);
+        // fatorial
+        /*
+         * int conta, numero, fatorial;
+         * String continua = "s";
+         * 
+         * do {
+         * System.out.println("Digite um número: ");
+         * numero = sc.nextInt();
+         * fatorial = 1;
+         * conta = numero;
+         * 
+         * do {
+         * fatorial = fatorial * conta;
+         * System.out.println(conta + " X ");
+         * conta--;
+         * } while (conta >= 1);
+         * 
+         * System.out.println("O fatorial do valor: " + numero + " é " + fatorial);
+         * } while (continua.equals("s"));
+         */
+
+        /*
+         * int conta = 1, contaDiv = 0, numero;
+         * 
+         * System.out.println("Digite um número: ");
+         * numero = sc.nextInt();
+         * 
+         * // números divisíveis e primos
+         * do {
+         * System.out.println(conta);
+         * if (numero % conta == 0) {
+         * contaDiv = contaDiv + 1;
+         * }
+         * conta++;
+         * } while (conta <= numero);
+         * 
+         * System.out.println("Ao todo existem " + contaDiv + " valores divisíveis.");
+         * 
+         * if (contaDiv > 2) {
+         * System.out.println("O valor " + numero + " não é primo!");
+         * } else {
+         * System.out.println("O valor " + numero + " é primo!");
+         * }
+         */
+
+        // opção contador
+        /*
+         * int conta, opcao;
+         * String sair = "s";
+         * 
+         * do {
+         * System.out.println(" Informe a opção: " + "\n" + "[1] De 1 a 10 \n" +
+         * "[2] De 10 a 1");
+         * opcao = sc.nextInt();
+         * 
+         * if (opcao == 1) {
+         * for (conta = 1; conta <= 10; conta++) {
+         * System.out.println(conta + " .. ");
+         * }
+         * } else if (opcao == 2) {
+         * for (conta = 10; conta >= 1; conta--) {
+         * System.out.println(conta + " .. ");
+         * }
+         * }
+         * System.out.println("[s/n] Deseja continuar?");
+         * sair = sc.next();
+         * } while (sair.equals("s"));
+         */
+        // seletor de pessoas
+        /*
+         * Stack<Pessoa> pessoas = new Stack<>();
+         * 
+         * String sexo,
+         * corCabelo,
+         * continua = "s";
+         * int idade;
+         * // String pessoas[];
+         * do {
+         * System.out.println("Qual o seu sexo? [M/F]");
+         * sexo = sc.next();
+         * System.out.println("Qual a idade?");
+         * idade = sc.nextInt();
+         * System.out.println("Qual a cor do Cabelo? \n" +
+         * "[1] Preto \n" +
+         * "[2] Castanho \n" +
+         * "[3] Loiro \n" +
+         * "[4] Ruivo");
+         * corCabelo = sc.next();
+         * 
+         * switch (corCabelo) {
+         * case "1":
+         * corCabelo = "Preto";
+         * break;
+         * case "2":
+         * corCabelo = "Castanho";
+         * break;
+         * case "3":
+         * corCabelo = "Loiro";
+         * break;
+         * case "4":
+         * corCabelo = "Ruivo";
+         * break;
+         * default:
+         * corCabelo = "Desconhecido";
+         * break;
+         * }
+         * 
+         * pessoas.push(new Pessoa(sexo, idade, corCabelo));
+         * 
+         * System.out.println("Deseja continuar? [s/n]");
+         * continua = sc.next();
+         * } while (continua.equals("s"));
+         * 
+         * // exemplo de como visualizar as pessoas na pilha
+         * System.out.println("\nPessoas cadastros:");
+         * 
+         * int contaM = 0,
+         * contaF = 0;
+         * for (Pessoa p : pessoas) {
+         * if (p.sexo.equalsIgnoreCase("m") && p.idade > 18
+         * && p.corCabelo.equals("Castanho")) {
+         * contaM = contaM + 1;
+         * } else if (p.sexo.equalsIgnoreCase("f") &&
+         * p.idade >= 25 && p.idade <= 30 && p.corCabelo.equals("Loiro")) {
+         * contaF = contaF + 1;
+         * }
+         * }
+         * System.out.
+         * println("Número de homens com mais de 18 anos e cabelos castanhos: " +
+         * contaM);
+         * System.out.println("Número de mulheres entre 25 a 30 anos e cabelos loiros: "
+         * + contaF);
+         */
+
+        // soma de valores
+        /*
+         * int conta,
+         * numero,
+         * soma = 0;
+         * for (conta = 1; conta <= 5;) {
+         * while (conta <= 5) {
+         * System.out.println("Digite um valor: ");
+         * numero = sc.nextInt();
+         * soma = soma + numero;
+         * conta++;
+         * }
+         * System.out.println("A soma dos valores é: " + soma);
+         * }
+         */
+
+        /*
+         * int numero,
+         * soma = 0;
+         * String continua;
+         * 
+         * do {
+         * System.out.println("Digite um valor: ");
+         * numero = sc.nextInt();
+         * 
+         * soma = soma + numero;
+         * 
+         * System.out.println("Quer continuar? (s/n)");
+         * continua = sc.next();
+         * } while (continua.equals("s"));
+         * System.out.println("A soma dos valores é: " + soma);
+         */
+
+        // números pares
+        /*
+         * int conta, valor;
+         * System.out.println("Digite um valor: ");
+         * valor = sc.nextInt();
+         * if (valor % 2 == 1) {
+         * valor--;
+         * }
+         * 
+         * for (conta = valor; conta >= 0; conta -= 2) {
+         * System.out.println(conta);
+         * }
+         */
+
+        /*
+         * int totalDez = 0,
+         * simp = 0,
+         * valor;
+         * for (int conta = 1; conta <= 6; conta++) {
+         * System.out.println("Digite um valor: ");
+         * valor = sc.nextInt();
+         * 
+         * if (valor >= 0 && valor <= 10) {
+         * totalDez = totalDez + 1;
+         * if (valor % 2 == 1) {
+         * simp = simp + valor;
+         * }
+         * }
+         * }
+         * System.out.println("Ao todo foram " + totalDez + " valores entre 0 e 10");
+         * System.out.println("Nesse intervalo, a soma de impares foi: " + simp);
+         */
+
+        /*
+         * // combinações
+         * for (int c1 = 1; c1 <= 3; c1++) {
+         * for (int c2 = 1; c2 <= 3; c2++) {
+         * System.out.println(c1 + " " + c2);
+         * }
+         * }
+         */
 
         sc.close();
+    }
+
+}
+
+class Pessoa {
+    String sexo;
+    int idade;
+    String corCabelo;
+
+    public Pessoa(String sexo, int idade, String corCabelo) {
+        this.sexo = sexo;
+        this.idade = idade;
+        this.corCabelo = corCabelo;
     }
 }
